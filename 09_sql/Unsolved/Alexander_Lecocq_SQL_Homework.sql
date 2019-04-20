@@ -40,12 +40,12 @@ drop column description;
 -- 4A
 select last_name, count(*) as 'Number of Actors'
 from actor
-group by actor_id;
+group by last_name;
 
 -- 4B
 select last_name, count(*) as 'Number of Actors'
 from actor
-group by actor_id
+group by last_name
 having count(*) > 1;
 
 -- 4C
