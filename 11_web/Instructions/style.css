@@ -1,0 +1,85 @@
+
+h1 {
+  color: #16A085;
+  font-size: 25pt;
+}
+
+h2 {
+  color: #16A085;
+  font-size: 20pt; 
+  text-align: center;
+}
+
+p {
+  color: darkslategray;
+  font-size: 12pt;
+  text-indent: 35px;
+  line-height: 1.6;
+}
+
+.body_box {
+  background-color: white;
+  min-height: 50px;
+  margin: 5px;
+  margin-top: 45px;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+#page_background {
+  background-color: #F2F3F4;
+}
+
+.img_thumb {
+  width: 120px;
+  margin: 5px;
+}
+
+.img_floating {
+  float: left;
+  width: 400px;
+  padding: 5px;
+}
+
+.img_med {
+  width: 450px;
+  padding: 5px;
+}
+
+.img_large {
+  width: 600px;
+  padding: 5px;
+}
+
+#img_selected {
+  border: 2px solid #16A085;
+}
+
+#footer-strip {
+  position:absolute;
+  top:-8px;
+  left:0;
+  width:100%;
+  height: 8px;
+  background-color: #16A085;
+}
+
+footer {
+  background: slategray;
+  color: white;
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding: 8px;
+  text-align: center;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 70px;    /* Footer height */
