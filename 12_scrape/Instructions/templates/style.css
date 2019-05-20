@@ -1,0 +1,14 @@
+#margined {
+    margin: 20px;
+    padding: 20px;
+}
+
+#feature-pic {
+    max-width: 90%; 
+    height: auto;
+}
+
+#hemi-pic {
+    max-width: 70%; 
+    height: auto;
+}
