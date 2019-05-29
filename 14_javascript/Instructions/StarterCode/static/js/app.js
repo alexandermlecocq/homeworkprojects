@@ -26,7 +26,7 @@ tableData.forEach(sighting => {
 // Filter table and display
 filter_button.on("click", function() {
     d3.event.preventDefault();
-    var inputElement = d3.select('#' + filter_type);
+    var inputElement = d3.select('#' + filter_type).select('input');
     var inputValue = inputElement.property("value");
     // Clear output table
     table_body.selectAll("tr").remove();
@@ -54,5 +54,5 @@ function changeFilter() {
     // Hide whatever existing filter exists
     filters.selectAll('li').style('display', 'none');
     // Display chosen filter
-    d3.select('#' + filter_type + '-filter').style('display', 'block');
+    d3.select('#' + filter_type).style('display', 'block');
 }
