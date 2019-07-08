@@ -23,7 +23,8 @@ var lightmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png
 });
 
 var layers = {
-  earthquakeLayer: new L.LayerGroup()
+  earthquakeLayer: new L.LayerGroup(),
+  plateLayer: new L.LayerGroup()
 };
 
 // Creating map object
@@ -37,7 +38,8 @@ lightmap.addTo(myMap);
 
 // Create an overlays object to add to the layer control
 var overlays = {
-  "Earthquakes": layers.earthquakeLayer
+  "Earthquakes": layers.earthquakeLayer,
+  'Fault Lines': layers.plateLayer
 };
 
 // Create a control for our layers, add our overlay layers to it
@@ -66,6 +68,11 @@ legend.onAdd = function (map) {
 // Add the info legend to the map
 legend.addTo(myMap);
 
+// Plot Plate lines as their own layer
+plateLines.features.forEach(feature =>{
+  L.geoJSON(feature.geometry).addTo(layers.plateLayer);
+});
+
 // Link to GeoJSON
 var APILink = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson";
 
@@ -89,5 +96,4 @@ d3.json(APILink).then(function(data) {
       "<strong>Date:</strong> " + time
       ).addTo(layers.earthquakeLayer);
   });
-
 });
