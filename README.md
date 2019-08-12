@@ -1,1 +1,1 @@
-# Bootcamp Homeworks
+# Miscellaneous Practice Projects
